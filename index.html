@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OECD Teaching Compass 핵심 요약</title>
+    <title>OECD Teaching Compass 상세 분석</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
@@ -15,6 +19,7 @@
             background-color: #f9f9f9;
             color: #333;
         }
+
         .container {
             max-width: 900px;
             margin: 20px auto;
@@ -23,33 +28,76 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
+
         header {
             text-align: center;
             padding: 20px 0;
             border-bottom: 3px solid #0073b0;
             margin-bottom: 30px;
         }
+
         header h1 {
             color: #0073b0;
             font-size: 2.2em;
             margin: 0;
         }
+
         header p {
             font-size: 1.1em;
             color: #555;
         }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+            background: none;
+            padding-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0073b0;
+            font-weight: 700;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #eef7ff;
+        }
+
         h2 {
             font-size: 1.8em;
             color: #005a87;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
-            margin-top: 40px;
+            margin-top: 60px; /* nav height offset */
         }
+
         h3 {
             font-size: 1.4em;
             color: #0073b0;
             margin-top: 30px;
         }
+
         .highlight-box {
             background-color: #eef7ff;
             border-left: 5px solid #0073b0;
@@ -57,20 +105,24 @@
             margin: 30px 0;
             border-radius: 5px;
         }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
-        li {
+
+        section ul li {
             background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%230073b0" d="M10 17l5-5-5-5v10z"/></svg>') no-repeat left center;
             background-size: 20px;
             padding-left: 30px;
             margin-bottom: 15px;
         }
+
         strong {
             color: #005a87;
             font-weight: 700;
         }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -79,14 +131,20 @@
             font-size: 0.9em;
             color: #777;
         }
+
         cite {
             font-style: normal;
             font-size: 0.8em;
             color: #888;
             margin-left: 5px;
+            word-break: keep-all;
         }
 
         @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
             header h1 {
                 font-size: 1.8em;
             }
@@ -100,6 +158,16 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#intro">소개</a></li>
+            <li><a href="#anchor">자기 개념</a></li>
+            <li><a href="#agency">교사의 주도성</a></li>
+            <li><a href="#competencies">교사의 역량</a></li>
+            <li><a href="#wellbeing">교사의 웰빙</a></li>
+            <li><a href="#ecosystem">학습 생태계</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <header>
@@ -108,59 +176,96 @@
         </header>
 
         <section id="intro">
-            <h2>Teaching Compass란?</h2>
-            <p>OECD Teaching Compass는 급변하는 세상 속에서 '가르친다는 것'과 '교사로 산다는 것'에 대한 미래지향적이고 총체적인 비전을 제시하는 나침반입니다. 이는 학생의 주도성, 역량, 웰빙을 강조하는 'OECD Learning Compass'와 함께 미래 교육을 위한 로드맵을 형성합니다. 교사에게 힘을 실어줌으로써 궁극적으로 학습자에게 힘을 실어주는 것을 목표로 합니다.</p>
+            <h2>소개: 미래를 현실로 만들기</h2>
+            <p>OECD Teaching Compass는 복잡성, 변화, 불확실성으로 정의되는 시대에 그 어느 때보다 중요해진 교사의 역할을 재조명합니다. 이는 단순히 교사를 지원하는 것을 넘어, 교육자 스스로가 21세기에 번성하고 학습의 미래를 만들어갈 수 있도록 교직 자체를 재구성하려는 담대한 시도입니다. Teaching Compass는 학생들을 위한 비전인 'OECD Learning Compass 2030'에서 직접적인 영감을 받았습니다. 학생들의 혁신적인 학습은 교사의 실천과 지원 시스템의 변화 없이는 실현될 수 없기 때문입니다.</p>
+            <h3>새로운 서사: 왜 지금 Teaching Compass인가?</h3>
+            <p>전 세계 교육 시스템은 현재 전례 없는 도전에 직면해 있습니다. 세계적인 교사 부족, 만연한 스트레스와 소진, 인공지능(AI)의 부상을 포함한 급격한 기술 변화는 교육 현장을 극적으로 바꾸어 놓았습니다. 이러한 도전은 동시에 교직을 역동적이고, 적응력 있으며, 협력적인 전문직으로 재구성할 수 있는 독특한 기회를 제공합니다. 교사들은 교육과정 제공, 학생 웰빙 증진, 디지털 및 AI 보조 학습 적응, 포용성 지원 등 점점 더 많은 기대를 받고 있지만 , 이를 성공적으로 수행하기 위한 도구나 인정, 시스템적 지원은 부족한 실정입니다. Teaching Compass는 이러한 격차를 해소하기 위해 일관되고 실행 가능한 프레임워크를 제공합니다.</p>
         </section>
 
-        <section id="core-concepts">
-            <h2>핵심 구성 요소</h2>
-            <p>Teaching Compass는 교사의 역할을 재정의하고 교육 혁신을 이끌기 위한 몇 가지 핵심적인 개념을 중심으로 구성됩니다.</p>
-            
+        <section id="anchor">
+            <h2>자기 개념: 변화를 탐색하는 내면의 닻</h2>
+            <p>Teaching Compass의 중심에는 교사의 강력한 <strong>'자기 개념(self-concept)'</strong>이 자리 잡고 있습니다. 이는 교사가 전문적 주도성, 역량, 웰빙을 굳건히 발전시킬 수 있도록 하는 내면의 닻과 같습니다. 이 자기 개념은 교사들이 지식 전달자를 넘어 멘토, 혁신가, 평생 학습의 주체로 행동할 수 있는 무대를 마련합니다. 자기 개념은 '존재(Being)', '소속감(Belonging)', '성장(Becoming)'이라는 세 가지 상호작용적 요소로 구성됩니다.</p>
             <div class="highlight-box">
-                <h3>중심축: 교사의 자기 개념 (The Anchor)</h3>
-                <p>나침반의 가장 중심에는 교사의 <strong>'자기 개념(Self-Concept)'</strong>이라는 내면의 닻이 있습니다. 이는 교사가 변화의 흐름 속에서 전문성과 정체성을 잃지 않도록 지탱해주는 기반이 됩니다.</p>
+                <h3>자기 개념의 핵심 요소 </h3>
                 <ul>
-                    <li><strong>존재 (Being):</strong> 교사가 시간이 지남에 따라 발전시키는 깊고 진정한 자아감입니다. 여기에는 직업적 정체성, 존엄성, 진실성, 그리고 뚜렷한 목적의식이 포함됩니다.</li>
-                    <li><strong>소속감 (Belonging):</strong> 학교 공동체의 소중한 일원으로 존중받고 지지받고 있다는 느낌입니다. 심리적 안정감과 상호 신뢰 관계를 통해 형성됩니다.</li>
-                    <li><strong>성장 (Becoming):</strong> 평생 학습과 성찰적 실천을 통해 끊임없이 진화하는 역동적인 상태를 의미합니다. 교사는 지속적인 전문 학습을 통해 새로운 도전에 맞서고 기회를 포착합니다.</li>
+                    <li><strong>존재 (Being):</strong> 교사가 시간이 지남에 따라 발전시키는 깊고 진정한 자아감입니다. 전문적 정체성, 존엄성, 진실성, 목적의식 등이 포함됩니다. </li>
+                    <li><strong>소속감 (Belonging):</strong> 학교 공동체의 소중한 일원으로 존중받고 지지받고 있다는 느낌입니다. 심리적 안정감, 배려와 지지를 기반으로 한 관계, 학교 풍토 등이 포함됩니다. </li>
+                    <li><strong>성장 (Becoming):</strong> 평생 학습과 성찰적 실천을 통해 끊임없이 진화하는 역동적인 전문적 정체성의 상태입니다. 지속적인 전문 학습, 자기주도적 및 협력적 학습 등이 포함됩니다. </li>
                 </ul>
             </div>
-
-            <h3>1. 교사의 주도성 (Teacher Agency)</h3>
-            <p>교사의 주도성은 자신의 의도적인 행동과 결정이 전문적 실천, 학생의 학습 경험, 나아가 교육 전반에 긍정적인 영향을 미칠 수 있다는 믿음을 의미합니다. 교사는 단순히 교육과정을 전달하는 수동적 존재가 아니라, 변화를 주도하는 핵심 행위자입니다.</p>
+            <h3>닻을 잃을 때의 위험</h3>
+            <p>내면의 닻이 약해지면 교사는 방향을 잃고 표류할 수 있습니다. 기술적 요구, 상충하는 정책 압력 등으로 인해 교사들은 다음과 같은 위험에 노출될 수 있습니다.</p>
             <ul>
-                <li><strong>개인적 주도성 (Individual Agency):</strong> 교사가 스스로의 판단과 가치, 창의성을 바탕으로 교육 환경을 만들어가는 능력입니다.</li>
-                <li><strong>상호 주도성 (Co-agency):</strong> 학생, 동료, 학부모, 심지어 AI와 같은 다른 행위자와의 상호작용 속에서 발휘되는 관계적 주도성입니다. 특히 AI 기술의 발전은 인간과 AI가 교실에서 공존하는 새로운 형태의 상호 주도성을 요구합니다.</li>
-                <li><strong>집단적 주도성 (Collective Agency):</strong> 교육자들이 공동의 목표를 위해 협력적으로 행동하는 능력입니다. 이는 집단적 효능감, 신뢰, 공유된 가치를 기반으로 합니다.</li>
+                <li><strong>나침반 바늘의 흔들림 (Spinning needle):</strong> 디지털 기기의 범람과 멀티태스킹 압박으로 인해 집중력을 잃고 교육의 핵심 목표를 놓치게 됩니다.</li>
+                <li><strong>항로 이탈 (Drifting off course):</strong> 자동화된 데이터 분석이나 표준화된 지표에 과도하게 의존하게 되면, 측정하기 쉬운 것에만 집중하게 되어 교육의 범위가 좁아질 수 있습니다.</li>
+                <li><strong>자기장 왜곡 (Magnetic distortion):</strong> 무의식적인 편견이나 외부의 압력으로 인해 전문적 판단력이 왜곡될 수 있습니다.</li>
             </ul>
-
-            <h3>2. 교사의 역량 (Teacher Competencies)</h3>
-            <p>교사의 역량은 복잡한 요구에 대응하기 위해 <strong>지식, 기술, 태도 및 가치</strong>를 성찰, 예측, 행동의 과정을 통해 동원하는 총체적인 능력입니다.</p>
-            <ul>
-                <li><strong>지식 (Knowledge):</strong> 교과 지식을 넘어 학습자에 대한 이해, 자기 자신에 대한 성찰, 세상의 변화, 그리고 AI와 같은 새로운 기술에 대한 지식을 포함합니다.</li>
-                <li><strong>기술 (Skills):</strong> 비판적 사고, 문제 해결 능력과 같은 인지적·메타인지적 기술, 공감 및 협업 능력과 같은 사회·정서적 기술, 그리고 디지털 도구를 활용하는 실용적 기술을 아우릅니다.</li>
-                <li><strong>태도와 가치 (Attitudes & Values):</strong> 성장 마인드셋, 형평성에 대한 헌신, 협력적 자세, 윤리적 책임감과 같은 내면의 신념을 포함합니다.</li>
-            </ul>
-
-            <h3>3. 교사의 웰빙 (Teacher Well-being)</h3>
-            <p>교사의 웰빙은 단순히 좋은 근무 조건을 넘어, 직업적 소명과 성취감을 포함하는 총체적인 개념으로 접근해야 합니다. 웰빙은 교사의 지속가능성을 위한 필수 조건입니다.</p>
-            <ul>
-                <li><strong>신체적 웰빙 (Physical Well-being):</strong> 공정한 보수, 관리 가능한 업무량, 안전한 근무 환경 등 기본적인 조건들을 포함합니다.</li>
-                <li><strong>인지적 웰빙 (Cognitive Well-being):</strong> 지적인 자극과 전문적 성장을 통해 유지되며, 과도한 행정 업무로 인한 인지 과부하를 경계해야 합니다.</li>
-                <li><strong>사회·정서적 웰빙 (Socio-emotional Well-being):</strong> 동료, 학생, 공동체로부터 받는 인정과 지지, 회복탄력성, 공감과 신뢰를 바탕으로 한 협력 관계를 통해 강화됩니다.</li>
-            </ul>
-
-            <h3>4. 학습 생태계 (Learning Ecosystem)</h3>
-            <p>교사는 고립된 존재가 아니라, 학생, 동료, 학교 리더, 학부모, 지역사회, 정책 입안자, 나아가 미디어까지 포함하는 역동적이고 상호 연결된 <strong>'학습 생태계'</strong>의 핵심적인 부분입니다. 진정한 교육 혁신은 이 모든 이해관계자들의 협력적인 노력을 통해 이루어질 수 있습니다.</p>
         </section>
 
-        <section id="conclusion">
-            <h2>결론: 미래를 여는 교사</h2>
-            <p>OECD Teaching Compass는 교사를 미래 교육의 단순한 실행자가 아닌, 교육의 미래를 공동으로 설계하는 <strong>핵심 설계자</strong>로 바라봅니다. 교사의 전문적 정체성, 주도성, 역량, 웰빙을 통합적으로 지원함으로써, 우리는 교사와 학생 모두가 번성하는 지속가능한 교육의 미래를 만들어갈 수 있습니다.</p>
+        <section id="agency">
+            <h2>교사의 주도성: 교육과정 변화를 이끌다</h2>
+            <p>교사의 주도성(Teacher agency)은 자신의 의도적인 행동과 결정이 전문적 실천, 학생의 학습 경험, 그리고 더 넓은 교육적 맥락에 긍정적인 영향을 미칠 수 있다는 교사의 믿음을 의미합니다. 이는 교사 자신과 학생들을 위한 긍정적인 변화를 이끌려는 의지를 포함합니다.</p>
+            <ul>
+                <li><strong>개인적 주도성 (Individual Agency):</strong> 교사가 자신의 신념, 목표 지향성, 의사결정 과정을 통해 발휘하는 주도성입니다. 높은 자기 효능감을 가진 교사는 도전을 통해 끈기 있게 나아가고 더 쉽게 혁신합니다.</li>
+                <li><strong>상호 주도성 (Co-agency):</strong> 교사와 학생, 동료, 학부모, 심지어 AI와 같은 다른 주체 간의 상호적인 관계 속에서 발생하는 주도성입니다. 특히 AI 교사 보조, AI 튜터 등은 교실 내 상호작용을 더욱 복잡하고 역동적으로 만듭니다.</li>
+                <li><strong>집단적 주도성 (Collective Agency):</strong> 교육자들이 공동의 목표를 향해 협력적으로 행동할 때 나타나는 힘입니다. 이는 집단적 효능감, 신뢰, 공유된 가치를 기반으로 구축됩니다.</li>
+            </ul>
         </section>
-        
+
+        <section id="competencies">
+            <h2>교사의 역량: 복잡성을 탐색하다</h2>
+            <p>교사의 역량은 단순히 지식이나 기술의 목록이 아니라, 복잡한 요구에 부응하기 위해 <strong>지식, 기술, 태도 및 가치</strong>를 동원하는 총체적 능력입니다.</p>
+            <h3>지식 (Knowledge) </h3>
+            <p>효과적인 교육의 중심에는 다차원적인 지식 기반이 있습니다. 교사는 지속적으로 업데이트되는 지식 기반 위에 전문성을 구축해야 합니다.</p>
+            <ul>
+                <li><strong>학습자에 대한 지식:</strong> 학생들이 인지적, 사회적, 정서적으로 어떻게 생각하고 성장하는지 이해하는 것입니다.</li>
+                <li><strong>자신에 대한 지식:</strong> 자기 인식은 교사가 편견을 인식하고 진정성 있게 가르칠 수 있게 합니다.</li>
+                <li><strong>세상에 대한 지식:</strong> 기후 변화, 디지털화 등 실제 세계의 문제와 학습을 연결하는 능력입니다.</li>
+                <li><strong>AI에 대한 지식:</strong> AI 도구의 작동 방식, 가능성과 위험, 그리고 교육 개선을 위한 활용법을 이해하는 것입니다.</li>
+            </ul>
+            <h3>기술 (Skills) </h3>
+            <p>기술은 교사가 자신의 지식을 역동적이고 윤리적인 방식으로 실행할 수 있도록 돕는 능력입니다.</p>
+            <ul>
+                <li><strong>인지 및 메타인지 기술:</strong> 비판적 사고, 문제 해결, 창의성, 인지적 유연성 등이 포함됩니다.</li>
+                <li><strong>사회·정서적 기술:</strong> 공감, 정서적 인식 및 자기 조절, 도움 요청 행동, 협업 능력 등이 포함됩니다.</li>
+                <li><strong>신체 및 실용 기술:</strong> ICT/디지털 기술, 스트레스 관리 기술, 안전 관련 기술 등이 포함됩니다.</li>
+            </ul>
+            <h3>태도와 가치 (Attitudes and Values) </h3>
+            <p>교사가 내리는 모든 결정은 그들의 태도와 가치에 의해 형성됩니다.</p>
+            <ul>
+                <li><strong>개인적 차원:</strong> 성장 마인드셋, 회복탄력성, 위험 감수, 형평성에 대한 헌신 등이 포함됩니다.</li>
+                <li><strong>사회적 차원:</strong> 사회적 인식, 시민적 책임감, 윤리적 책임감 및 진실성이 포함됩니다.</li>
+                <li><strong>보편적 차원:</strong> 존엄, 정의, 존중, 연민, 환경 인식과 같은 국경을 초월하는 가치들이 포함됩니다.</li>
+            </ul>
+        </section>
+
+        <section id="wellbeing">
+            <h2>교사의 웰빙: 번성하는 전문가를 위하여</h2>
+            <p>교사의 웰빙은 단순히 보수, 업무량, 근무 시간과 같은 구조적 측면을 넘어 지적, 사회·정서적, 신체적 차원을 포괄하는 총체적인 방식으로 고려되어야 합니다. 긍정적인 교사 경험은 학생들이 성장할 수 있는 정서적으로 지지적인 교실 환경과 상관관계가 있습니다.</p>
+            <div class="highlight-box">
+                <h3>웰빙의 3가지 차원 </h3>
+                <ul>
+                    <li><strong>신체적 웰빙 (Physical Well-being):</strong> 공정한 급여, 관리 가능한 업무량, 안전하고 편안한 교육 공간과 같은 근무 조건이 핵심입니다.</li>
+                    <li><strong>인지적 웰빙 (Cognitive Well-being):</strong> 지적 참여, 전문적 성장, 그리고 자신의 학습 경로를 설계할 때 느끼는 주인의식(ownership)을 통해 유지됩니다.</li>
+                    <li><strong>사회·정서적 웰빙 (Socio-emotional Well-being):</strong> 자기 가치와 인정, 회복탄력성과 자기 연민, 그리고 공감, 신뢰, 협력을 통해 형성됩니다.</li>
+                </ul>
+            </div>
+             <h3>AI와 교사 웰빙</h3>
+             <p>인공지능(AI)은 교사의 웰빙에 양면적인 영향을 미칩니다. 한편으로 AI 보조 도구는 채점이나 데이터 분석과 같은 행정 부담을 줄여 교사가 멘토링, 맞춤형 지도 등 인간적인 측면에 더 많은 시간을 할애할 수 있게 합니다. 반면에, 불충분한 교육이나 안내 없이 새로운 AI 도구를 배우고 통합해야 하는 압박은 인지적 부담과 불안을 가중시킬 수 있습니다.</p>
+        </section>
+
+        <section id="ecosystem">
+            <h2>학습 생태계: 공동의 영향을 위한 통합</h2>
+            <p>교육과 학습은 교사뿐만 아니라 다양한 행위자들이 참여하는 역동적이고 상호 연결된 생태계 안에서 번성합니다. 진정한 변화는 교육 정책가, 학교 지도자, 지역사회, 기업, 대학, 교원 단체 등 여러 이해관계자들의 노력을 필요로 합니다.</p>
+            <ul>
+                <li><strong>미시·중위 시스템 (Micro- and meso-system):</strong> 교육 생태계의 핵심에는 학생이 있습니다. 교사, 학교 지도자, 상담사, 학부모와의 협력은 효과적인 교육 생태계의 핵심입니다.</li>
+                <li><strong>외적 시스템 (Exo-system):</strong> 지역 교육 당국은 학교 거버넌스, 자원 배분, 정책 실행을 관리하며 교육 생태계를 형성합니다. 민간 재단은 혁신적인 이니셔티브에 자금을 지원하여 시스템의 격차를 해소하기도 합니다.</li>
+                <li><strong>거시 시스템 (Macro-system):</strong> 교육 정책은 교사 기준, 자원 공급, 학생 형평성에 영향을 미칩니다. 미디어는 교육과 교사에 대한 대중의 인식을 형성하며 , 사회가 교육에 부여하는 문화적 가치 또한 교직에 큰 영향을 미칩니다.</li>
+            </ul>
+        </section>
+
         <footer>
-            <p>이 문서는 OECD Education Policy Perspectives No. 123 'OECD Teaching Compass'를 기반으로 핵심 내용을 요약 및 정리한 것입니다.</p>
+            <p>이 문서는 OECD Education Policy Perspectives No. 123 'OECD Teaching Compass'를 기반으로 내용을 구성하였습니다.</p>
         </footer>
     </div>
 
